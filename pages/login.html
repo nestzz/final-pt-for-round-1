@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - S.A.P AI</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    
+</head>
+<body>
+    <div class="header-nav">
+        <a href="../index.html" class="nav-button">Home</a>
+        <a href="../pages/profile.html" class="nav-button">Profile</a>
+    </div>
+    <div class="signup-container">
+        <div class="header-buttons">
+            <h2>Login</h2>
+          
+        </div>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" class="signup-input" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" class="signup-input" required>
+            </div>
+            <button type="submit" class="signup-button">Login</button>
+        </form>
+        <button id="signoutButton" class="signup-button">Log Out</button>
+        <p id="error-message"></p>
+        <p class="login-link">Don't have an account? <a href="sign-up.html">Sign up here</a></p>
+    </div>
+    <script src="../js/gradient.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

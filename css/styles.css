@@ -1,0 +1,1072 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a0a0a;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.login-header-logo {
+    width: 150px;
+    height: auto;
+}
+
+.login-header-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.signup-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    z-index: 1000;
+}
+
+.signup-input {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+.signup-input::placeholder {
+    color: white;
+    font-size: 16px;
+}
+
+.signup-input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.signup-button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+   
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    font-weight: bold;
+   
+}
+
+.signup-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+                0 0 40px rgba(255, 255, 255, 0.3),
+                0 0 60px rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.signup-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    text-shadow: none;
+}
+
+/* Add this to your existing CSS */
+#error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+.login-link {
+    margin-top: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+.login-link a {
+    color: #4a9eff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+    color: #66b0ff;
+    text-shadow: 0 0 8px rgba(74, 158, 255, 0.5);
+}
+
+/* Add these styles to your existing CSS */
+
+/* Sign out button specific styling */
+#signoutButton {
+    background: rgba(220, 53, 69, 0.2); /* Red tint */
+    margin-top: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#signoutButton:hover {
+    background: rgba(220, 53, 69, 0.3);
+    box-shadow: 0 0 20px rgba(220, 53, 69, 0.5),
+                0 0 40px rgba(220, 53, 69, 0.3),
+                0 0 60px rgba(220, 53, 69, 0.1);
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+#signoutButton:active {
+    transform: translateY(0px);
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+}
+
+/* Spacing between buttons and links */
+.signup-button + #signoutButton {
+    margin-top: 0.5rem;
+}
+
+#signoutButton + .login-link {
+    margin-top: 1rem;
+}
+
+/* When user is not logged in */
+#signoutButton.hidden {
+    display: none;
+}
+
+/* Add this to your body or specific elements */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* If you have any blur effects, make sure they're not too strong */
+.signup-container {
+    /* Reduce or remove any excessive blur values */
+    backdrop-filter: blur(8px); /* If you have this, try reducing the value */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Reduce shadow spread if needed */
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Make text sharper */
+h2, input, button, p, a {
+    text-shadow: none; /* Remove any text shadows if they're causing issues */
+    letter-spacing: 0.2px;
+}
+
+.input-group label {
+    color: #ffffff; /* Pure white */
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    /* Optional: add a slight text shadow if you want the labels to pop more */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
+}
+
+.chat-container {
+    position: relative;
+    max-width: 1200px;
+    width: 95%;
+    margin: 80px auto 20px auto;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    min-height: calc(100vh - 100px);
+    height: auto;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 300px;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chat-header h2 {
+    color: #fff;
+    margin: 0;
+    font-size: 24px;
+}
+
+.login-button {
+    padding: 8px 16px;
+    background: rgba(74, 158, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background: rgba(74, 158, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.chat-input-form {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.chat-input {
+    flex-grow: 1;
+    min-width: 0;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.07);
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.chat-input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.chat-button {
+    padding: 12px 24px;
+    background: rgba(74, 158, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    min-width: 100px;
+}
+
+.chat-button:hover {
+    background: rgba(74, 158, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(74, 158, 255, 0.3);
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.user-message {
+    background: rgba(74, 158, 255, 0.2);
+    margin-left: auto;
+    color: white;
+}
+
+.ai-message {
+    background: rgba(255, 255, 255, 0.1);
+    margin-right: auto;
+    color: white;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 15px;  /* Space between buttons */
+    align-items: center;
+}
+
+.chat-link {
+    padding: 8px 16px;
+    background: rgba(74, 158, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.chat-link:hover {
+    background: rgba(74, 158, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    padding: 15px !important;
+    display: flex;
+    align-items: center;
+    width: fit-content !important;
+    min-width: 50px;
+}
+
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    opacity: 0.4;
+    animation: typing 1.2s infinite;
+}
+
+.typing-indicator span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+    margin-right: 0;
+}
+
+@keyframes typing {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(-5px);
+        opacity: 0.8;
+    }
+}
+
+/* Header navigation styles */
+.header-nav {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 1001;
+}
+
+.nav-button {
+    padding: 8px 16px;
+    background: rgba(74, 158, 255, 0.2);  /* Matching your existing button style */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    background: rgba(74, 158, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(74, 158, 255, 0.3);
+}
+
+.nav-button.left-nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.nav-button.right-nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.plans-container {
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.plan-card {
+    width: 100%;
+    height: auto;
+    min-height: 450px;
+    max-width: 350px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    z-index: 1;
+}
+
+.plan-card.featured {
+    border: 2px solid #FFD700;
+    position: relative;
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.plan-header h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.plan-features {
+    margin: 25px 0;
+    flex-grow: 1;
+}
+
+.plan-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan-features li {
+    padding: 10px 0;
+    color: #666;
+    position: relative;
+    padding-left: 25px;
+}
+
+.plan-features li:before {
+    content: "✓";
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+}
+
+.plan-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #333;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: auto;
+}
+
+.plan-button:hover {
+    background: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .plan-card {
+        min-height: 400px;
+    }
+}
+
+.discover-section .card {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+.discover-section .card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.discover-section .card .card-header {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.discover-section .card .card-header .feature_img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin: 10px auto;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.discover-section .card .card-header .feature_img[src$=".svg"] {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    filter: none;
+    transform: scale(1);
+    color: currentColor;
+}
+
+.discover-section .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.discover-section .card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.discover-action-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #007bff;  /* or your preferred button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;  /* removes underline from link */
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin: 15px auto;
+    width: fit-content;
+}
+
+.discover-action-btn:hover {
+    background-color: #0056b3;  /* darker shade for hover */
+    color: white;  /* maintains white text on hover */
+    text-decoration: none;  /* ensures no underline appears on hover */
+}
+
+/* Keep your existing gradient-bg styles */
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .plan-card {
+        margin: 10px 0;
+    }
+    
+    .plans-title {
+        font-size: 24px;
+    }
+    
+    .plan-header h2 {
+        font-size: 20px;
+    }
+    
+    .price {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .plans-grid {
+        padding: 10px;
+    }
+    
+    .nav-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .plan-features ul {
+        padding-left: 20px;
+    }
+    
+    .plan-button {
+        padding: 10px 20px;
+    }
+}
+
+/* Horizontal responsiveness */
+@media screen and (max-height: 768px) {
+    body {
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .plans-container {
+        padding: 80px 20px 20px; /* Added top padding for nav buttons */
+        min-height: 100vh;
+    }
+
+    .plan-card {
+        height: auto;
+        min-height: 450px; /* Minimum height for consistency */
+    }
+
+    .chat-container {
+        height: 80vh;
+        max-height: 500px;
+        margin: 80px auto; /* Added margin for nav buttons */
+    }
+
+    .signup-container {
+        margin: 80px auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
+/* Extra small height */
+@media screen and (max-height: 600px) {
+    .plans-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .plan-card {
+        min-height: 400px;
+        padding: 20px;
+    }
+
+    .plan-header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        font-size: 2rem;
+    }
+
+    .plan-features li {
+        padding: 8px 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* Landscape mode for mobile */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    body {
+        overflow-y: auto;
+    }
+
+    .plans-container {
+        padding: 60px 15px 15px;
+    }
+
+    .plans-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .plan-card {
+        min-height: 350px;
+        padding: 15px;
+    }
+
+    .nav-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .chat-container,
+    .signup-container {
+        margin: 60px auto;
+        height: auto;
+        max-height: 80vh;
+    }
+}
+
+/* Ensure smooth scrolling on all browsers */
+.plans-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.plans-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.plans-grid::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.plans-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Profile Page Styles */
+.profile-section .profile-card {
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.profile-img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.upload-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #007bff;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+    background: #0056b3;
+}
+
+.profile-name-input {
+    margin-top: 15px;
+    border: none;
+    border-bottom: 2px solid #eee;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.profile-name-input:focus {
+    outline: none;
+    border-bottom-color: #007bff;
+}
+
+.stats-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); /* Creates 3 equal rows */
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* Takes full height of grid cell */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item i {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.stat-item h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stat-input {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    margin: 5px auto;
+    transition: border-color 0.2s;
+}
+
+.stat-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+    }
+    
+    .stat-item {
+        padding: 15px;
+    }
+}
+
+.save-profile-btn {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-profile-btn:hover {
+    background-color: #0056b3;
+}
+
+.ai-chat-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.ai-chat-btn:hover {
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+}
+
+.ai-chat-btn i {
+    font-size: 1.1em;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.profile-card {
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.card-title {
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add these new styles */
+.profile-section {
+    min-height: calc(100vh - 100px); /* Adjust based on your nav/header height */
+    padding: 20px;
+    max-width: 100vw;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container-fluid {
+    padding: 20px;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Make left card fill full height */
+.profile-section .col-lg-8 .profile-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section .col-lg-8 .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure stats grid takes up available space */
+.stats-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-content: start; /* Aligns grid items to the top */
+    padding: 20px 0;
+}
+
+/* Right column cards */
+.profile-section .col-lg-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section .col-lg-4 .profile-card:first-child {
+    flex: 0 0 auto; /* Don't grow, don't shrink, auto basis */
+}
+
+.profile-section .col-lg-4 .profile-card:last-child {
+    flex: 1; /* Take up remaining space */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .profile-section .col-lg-8 .profile-card,
+    .profile-section .col-lg-4 .profile-card {
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* Placeholder styling */
+.chat-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.plans-title {
+    color: white;
+    text-align: center;
+}
+
