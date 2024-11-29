@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Counselling - S.A.P AI</title>
+    <link rel="stylesheet" href="../style-main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="career-hero">
+        <div class="career-overlay"></div>
+        <div class="career-content">
+            <h1>Shape Your Future</h1>
+            <p>Discover your perfect career path with AI-powered guidance</p>
+            <button class="start-journey-btn" onclick="window.location.href='career-roadmap.html'">Start Your Journey</button>
+        </div>
+    </div>
+
+    <div class="career-services">
+        <div class="service-card">
+            <div class="service-icon">🎯</div>
+            <h3>Personality Assessment</h3>
+            <p>Understand your strengths and interests through AI analysis</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">📊</div>
+            <h3>Career Matching</h3>
+            <p>Get personalized career recommendations based on your profile</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🎓</div>
+            <h3>Education Planning</h3>
+            <p>Map out your educational path to reach your career goals</p>
+        </div>
+    </div>
+
+    <div class="career-cta">
+        <h2>Ready to Begin?</h2>
+        <p>Take the first step towards your dream career</p>
+        <button class="schedule-btn">Schedule Consultation</button>
+    </div>
+
+    <div class="career-assessment">
+        <div class="assessment-header">
+            <h2>Career Personality Assessment</h2>
+            <p>How much would you enjoy doing each of these activities in your work?</p>
+            <div class="progress-indicator">
+                <p>Step 1 of 5</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 20%"></div>
+                </div>
+            </div>
+        </div>
+
+        <form id="careerForm" class="question-form">
+            <div class="questions-container" data-page="1">
+                <div class="question-item">
+                    <p>1. Design websites and digital interfaces</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q1" value="1">
+                            <span>Strongly Dislike</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="2">
+                            <span>Dislike</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="3">
+                            <span>Neutral</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="4">
+                            <span>Like</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="5">
+                            <span>Strongly Like</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>2. Analyze data and create statistical reports</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q2" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q2" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q2" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q2" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>3. Lead and coordinate team projects</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q3" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q3" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q3" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q3" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>4. Solve complex technical problems</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q4" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q4" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q4" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q4" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>5. Create and edit visual content</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q5" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q5" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q5" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q5" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>6. Write and edit content for different audiences</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q6" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q6" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q6" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q6" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>7. Research and analyze market trends</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q7" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q7" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q7" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q7" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>8. Develop software applications</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q8" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q8" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q8" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q8" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>9. Manage client relationships and communications</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q9" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q9" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q9" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q9" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>10. Plan and execute digital marketing campaigns</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q10" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q10" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q10" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q10" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="questions-container" data-page="2" style="display: none;">
+                <!-- Page 2 questions -->
+            </div>
+            
+            <div class="questions-container" data-page="3" style="display: none;">
+                <!-- Page 3 questions -->
+            </div>
+            
+            <div class="questions-container" data-page="4" style="display: none;">
+                <!-- Page 4 questions -->
+            </div>
+            
+            <div class="questions-container" data-page="5" style="display: none;">
+                <!-- Page 5 questions -->
+            </div>
+
+            <div class="form-navigation">
+                <button type="button" class="prev-btn" disabled>Previous</button>
+                <button type="button" class="next-btn">Next Page ></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
